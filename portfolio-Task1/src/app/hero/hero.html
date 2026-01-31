@@ -1,0 +1,29 @@
+<section id="hero" class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h1 class="text-5xl lg:text-7xl font-bold mb-6 text-gray-900">
+                Hi There, I'm a <span class="text-teal-500">Front-End</span> {{ jobTitle }}
+            </h1>
+            <p class="text-lg lg:text-xl text-gray-600 mb-12">
+                My name is <span class="font-semibold text-gray-900">{{ firstName }} {{ lastName }}</span>,
+                {{ description }}
+            </p>
+            <div class="flex gap-4">
+                <a href="#contact"
+                    class="px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:scale-105 transition-transform">Say
+                    Hi</a>
+                <a [href]="cvLink"
+                    class="px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-lg font-semibold hover:scale-105 transition-transform">Download
+                    CV ↓</a>
+            </div>
+        </div>
+        <div class="flex justify-center md:justify-end">
+            <div class="relative">
+                <div
+                    class="absolute -inset-4 bg-gradient-to-r from-teal-500 to-blue-500 rounded-3xl opacity-25 blur-2xl">
+                </div>
+                <img [src]="profileImage" [alt]="firstName" class="relative w-80 lg:w-96 rounded-3xl">
+            </div>
+        </div>
+    </div>
+</section>

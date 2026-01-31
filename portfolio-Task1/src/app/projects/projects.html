@@ -1,0 +1,17 @@
+<section id="projects" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-5xl font-bold mb-16 text-gray-900">FEATURED PROJECTS</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div *ngFor="let project of projects"
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img [src]="project.image" [alt]="project.title" class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <h3 class="text-3xl font-bold mb-4">{{ project.title }}</h3>
+                    <p class="text-gray-600 mb-6">{{ project.description }}</p>
+                    <a [href]="project.link" target="_blank"
+                        class="text-teal-500 font-bold hover:gap-4 transition-all">{{ view }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

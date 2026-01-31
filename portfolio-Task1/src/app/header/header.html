@@ -1,0 +1,10 @@
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="text-2xl font-bold text-teal-500">{{ logoText }}</div>
+        <ul class="hidden md:flex gap-8">
+            <li *ngFor="let link of navLinks">
+                <a [href]="link.url" class="hover:text-teal-500 transition-colors">{{ link.label }}</a>
+            </li>
+        </ul>
+    </nav>
+</header>

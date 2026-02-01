@@ -22,5 +22,5 @@ import { FooterComponent } from './footer/footer';
   templateUrl: './app.html'
 })
 export class App {
-  protected readonly title = signal('Mostafa Khalifa Portfolio');
+  protected readonly title = signal('Portfolio');
 }

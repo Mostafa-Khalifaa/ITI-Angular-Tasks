@@ -1,0 +1,26 @@
+
+<div class="container mt-5">
+<h2 class="mb-4">Users List</h2>
+
+<div class="row mb-4">
+<div class="col-md-6 d-flex gap-2">
+
+  <input type="text" class="form-control" placeholder="Search by email" [(ngModel)]="searchEmail">
+
+  <button class="btn btn-primary" (click)="search()">Search</button>
+
+          <button *ngIf="isSearch" class="btn btn-outline-secondary" (click)="reset()">
+            Reset
+          </button>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-3" *ngFor="let u of searchList">
+          <app-user-card [user]="u"></app-user-card>
+        </div>
+        <div *ngIf="searchList.length === 0" class="alert alert-warning">
+          No users found
+        </div>
+
+      </div>
+    </div>

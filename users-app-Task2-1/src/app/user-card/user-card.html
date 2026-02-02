@@ -1,0 +1,28 @@
+    <div class="card text-center shadow-sm h-100 p-3">
+      
+      <div class="d-flex justify-content-center mb-3">
+        <div class="rounded-circle bg-light border d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+          <span style="font-size: 40px;">👤</span>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <span class="badge rounded-pill px-3 py-2"
+          [ngClass]="{
+            'bg-danger': user.role === 'admin',
+            'bg-success': user.role === 'user',
+            'bg-warning text-dark': user.role === 'moderator'
+          }">
+          {{ user.role }}
+        </span>
+      </div>
+
+      <h5 class="card-title">{{ user.username }}</h5>
+      <p class="text-muted small">{{ user.email }}</p>
+      <hr>
+      <div class="text-start small">
+        <p class="mb-1"><strong>Phone:</strong> {{ user.phone }}</p>
+        <p class="mb-1"><strong>Birth:</strong> {{ user.birthdate }}</p>
+      </div>
+
+    </div>

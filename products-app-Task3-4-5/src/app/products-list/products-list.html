@@ -1,0 +1,23 @@
+<div class="row g-4">
+  <div class="col-md-4" *ngFor="let item of products">
+
+    <div class="card h-100 shadow-sm">
+      <img [src]="item.thumbnail" class="card-img-top" style="height: 250px; object-fit: contain; padding: 10px;">
+
+      <div class="card-body">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <p class="text-muted">{{ item.price }} EGP</p>
+
+        <p [ngClass]="item.stock === 0 ? 'text-danger fw-bold' : 'text-success fw-bold'">
+          {{ item.stock === 0 ? 'Out of Stock' : item.stock + ' items in stock' }}
+        </p>
+
+        <a [routerLink]="['/product', item.id]" class="btn btn-primary w-100">View Details</a>
+
+        <button class="btn btn-success w-100 mt-2" [disabled]="item.stock === 0" (click)="addToCart(item)">Add to
+          Cart</button>
+      </div>
+    </div>
+
+  </div>
+</div>

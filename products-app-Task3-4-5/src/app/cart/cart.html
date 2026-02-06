@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">My Cart</h1>
+
+  <div *ngIf="items().length === 0" class="alert alert-info text-center">
+    Your cart is empty. <a routerLink="/products" class="alert-link">Start shopping</a>
+  </div>
+
+  <div *ngIf="items().length > 0">
+    <table class="table align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items()">
+          <td>
+            <img [src]="item.thumbnail" style="width: 50px; height: 50px; object-fit: contain;" class="me-2" />
+            {{ item.title }}
+          </td>
+          <td>{{ item.price }} EGP</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price * item.quantity }} EGP</td>
+          <td>
+            <button class="btn btn-sm btn-outline-danger" (click)="cartService.removeFromCart(item.id)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class="table-primary fw-bold">
+          <td colspan="3">Grand Total</td>
+          <td colspan="2">{{ getTotal() }} EGP</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="text-end">
+      <button class="btn btn-danger" (click)="clear()">Clear Cart</button>
+    </div>
+  </div>
+</div>

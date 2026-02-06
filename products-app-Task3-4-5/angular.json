@@ -3,11 +3,11 @@
   "version": 1,
   "cli": {
     "packageManager": "pnpm",
-    "analytics": "20d8c8c2-1531-4065-8cc7-d184893faee6"
+    "analytics": "18f10b49-a105-4a6b-9fd0-20df499ec208"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "users-app": {
+    "products-app-Task3": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "users-app:build:production"
+              "buildTarget": "products-app-Task3:build:production"
             },
             "development": {
-              "buildTarget": "users-app:build:development"
+              "buildTarget": "products-app-Task3:build:development"
             }
           },
           "defaultConfiguration": "development"

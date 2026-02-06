@@ -1,5 +1,5 @@
 {
-  "name": "users-app",
+  "name": "products-app-task3",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:users-app": "node dist/users-app/server/server.mjs"
+    "serve:ssr:products-app-Task3": "node dist/products-app-Task3/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -22,6 +22,7 @@
     ]
   },
   "private": true,
+  "packageManager": "pnpm@10.28.2",
   "dependencies": {
     "@angular/common": "^21.1.0",
     "@angular/compiler": "^21.1.0",
